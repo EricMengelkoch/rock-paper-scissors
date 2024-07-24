@@ -17,7 +17,7 @@ function getHumanChoice() {
     } else if (choice == "paper") {
         return "Paper";
     } else if (choice == "scissors") {
-        return "Sciccors"
+        return "Scissors"
     } else {
         console.log("Invalid choice, try again");
         getHumanChoice();
@@ -32,27 +32,46 @@ function playGame() {
 
     function playRound(hmn, cpu) {
         if (hmn == "Rock" && cpu == "Scissors" || hmn == "Paper" && cpu == "Rock" || hmn == "Scissors" && cpu == "Paper") {
-            console.log("You win! " + hmn + " beats " + cpu);
+            text.textContent = "You win! " + hmn + " beats " + cpu;
             humanScore += 1;
+            score.textContent = "You: " + humanScore + " vs " + computerScore + " :Computer"
         } else if (cpu == "Rock" && hmn == "Scissors" || cpu == "Paper" && hmn == "Rock" || cpu == "Scissors" && hmn == "Paper") {
-            console.log("You lose! " + cpu + " beats " + hmn);
+            text.textContent = "You lose! " + cpu + " beats " + hmn;
             computerScore += 1;
+            score.textContent = "You: " + humanScore + " vs " + computerScore + " :Computer"
         } else {
-            console.log("It's a tie!")
+            text.textContent ="It's a tie!";
+            score.textContent = "You: " + humanScore + " vs " + computerScore + " :Computer"
+        }
+        if (humanScore == 3) {
+            score.textContent = "Congrats! You beat the computer " + humanScore + " to " + computerScore;
+            humanScore = 0;
+            computerScore = 0;
+        } else if (computerScore == 3) {
+            score.textContent = "Yikes, beaten by the computer " + computerScore + " to " + humanScore;
+            humanScore = 0;
+            computerScore = 0;
         }
     }
 
-    while (humanScore < 3 && computerScore < 3) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
+    let text = document.querySelector("#textbox");
+    let score = document.querySelector("#scorebox");
 
-    if (humanScore = 3) {
-        console.log("Congrats! You beat the computer " + humanScore + " to " + computerScore);
-    } else if (computerScore = 3) {
-        console.log("Yikes, beaten by the computer " + computerScore + " to " + humanScore);
-    } else {
-        console.log("How did this game end??");
-    }
+    let rockButton = document.querySelector("#rock");
+    rockButton.addEventListener("click", () => {
+        playRound("Rock", getComputerChoice());
+    })
+    let paperButton = document.querySelector("#paper");
+    paperButton.addEventListener("click", () => {
+        playRound("Paper", getComputerChoice());
+    })
+    let scissorsButton = document.querySelector("#scissors");
+    scissorsButton.addEventListener("click", () => {
+        playRound("Scissors", getComputerChoice());
+    })
+    
+
+    
 }
 
 playGame();
