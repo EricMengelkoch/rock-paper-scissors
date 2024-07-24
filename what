@@ -1,0 +1,41 @@
+[33mcommit 0023b0d0cb1600e95fb3d910b38ea49fc4c83096[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Wed Jul 24 16:54:07 2024 -0500
+
+    Added buttons to play game, as well as UI information
+
+[33mcommit f7725137c2334eb7e70b4ccef6576934d14a0bb4[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Fri Jul 12 18:57:05 2024 -0500
+
+    Created full game logic. Game is fully playable and functional
+
+[33mcommit 7ff52142eff702d26b89c2f6873168b96e14faa3[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Fri Jul 12 18:49:22 2024 -0500
+
+    Completed round and score logic
+
+[33mcommit 901e84c695f6d567af35618a50747b1905d5f4db[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Fri Jul 12 18:32:37 2024 -0500
+
+    Added human choice logic
+
+[33mcommit 771aa9b93fcac8b01d2ec70e0c467c1a387b6340[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Fri Jul 12 18:24:56 2024 -0500
+
+    Implement computer choice logic
+
+[33mcommit 6752ac869f380865259f3b68e28c66da9f1e77c5[m
+Author: Eric Mengelkoch <ericmengelkoch@gmail.com>
+Date:   Fri Jul 12 18:01:45 2024 -0500
+
+    Added HTML skeleton, linked JS
+
+[33mcommit 4a717de00ee40454ff9abda684437ecc8c65b69c[m
+Author: EricMengelkoch <134116393+EricMengelkoch@users.noreply.github.com>
+Date:   Fri Jul 12 17:56:57 2024 -0500
+
+    Initial commit
